@@ -1,34 +1,41 @@
 \documentclass[10pt,a4paper]{book}
+%
+\usepackage[left=20mm,right=20mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{courier}
 %
 \input{latex-utf8.tex}
-
+%
+\pagestyle{empty}
+%
 \begin{document}
-00B0° % Degree symbol
-
-00B2 ² Superscript two
-
-00B4 ´ Acute accent
-
-00BD ½ Vulgar fraction one half
-
-0100 Ā Latin capital letter A with macron
-
-0101 ā Latin small letter a with macron
-
-0174 Ŵ Latin capital letter W with circumflex
-
-0175 ŵ Latin small letter w with circumflex
-
-200B ​? Zero width space
-
-20AC € Currency symbol euro
-
-2212 - Mathematical operator minus
-
-25BA ► Pointing pointer black right
-
-25C4 ◄ Pointing pointer black left
-
+\begin{tabularx}{1\linewidth}{b{10mm}b{5mm}X}
+\texttt{00B0} & \ensuremath{^\circ} & \verb+ Degree symbol
++ \tabularnewline
+\texttt{00B2} & \^{2} & \verb+ Superscript two
++ \tabularnewline
+\texttt{00B4} & \'{ } & \verb+ Acute accent
++ \tabularnewline
+\texttt{00BD} & \ensuremath{\frac12} & \verb+ Vulgar fraction one half
++ \tabularnewline
+\texttt{0100} & \ensuremath{\bar{A}} & \verb+ Latin capital letter A with macron FIXME bad math font
++ \tabularnewline
+\texttt{0101} & \ensuremath{\bar{a}} & \verb+ Latin small letter a with macron FIXME bad math font
++ \tabularnewline
+\texttt{0174} & \^{W} & \verb+ Latin capital letter W with circumflex
++ \tabularnewline
+\texttt{0175} & \^{w} & \verb+ Latin small letter w with circumflex
++ \tabularnewline
+\texttt{200B} &  & \verb+  ZERO WIDTH SPACE  FIXME is there a better replacement in latex?
++ \tabularnewline
+\texttt{20AC} & \euro & \verb+ Currency symbol euro
++ \tabularnewline
+\texttt{2212} & \ensuremath{-} & \verb+ Mathematical operator minus
++ \tabularnewline
+\texttt{25BA} & \ensuremath{\blacktriangleright} & \verb+ $\blacktriangleright$
++ \tabularnewline
+\texttt{25C4} & \ensuremath{\blacktriangleleft} & \verb+ $\blacktriangleleft$+ \tabularnewline
+\end{tabularx}
 \end{document}
