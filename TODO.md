@@ -2,4 +2,4 @@ Todo
 ====
 
 Things to do:
-* create test-utf8.tex with a script
+DONE create test-utf8.tex with a script
